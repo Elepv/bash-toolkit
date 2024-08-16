@@ -60,11 +60,16 @@ case $OS in
     ;;
 esac
 
-# 应用组更改
-newgrp docker
-
 # 验证安装
 echo "Docker version:"
 sudo docker --version
 echo "Docker Compose version:"
 docker-compose --version
+
+# 提示用户重启终端或重新登录
+echo "1. 请注销并重新登录
+2. 开一个新的终端以应用 Docker 组权限。
+3. 运行下面的命令来更改应用组：
+    newgrp docker"
+
+
